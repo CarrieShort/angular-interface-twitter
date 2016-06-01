@@ -16,7 +16,7 @@ twitterRouter.get('/recent_tweets', (req, res) => {
   client.get('statuses/user_timeline', (error, data) => {
     if (error) return console.log(error);
     res.status(200).json({
-      data: data
+      tweets: data
     });
   });
 });

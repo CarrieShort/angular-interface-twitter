@@ -5,12 +5,6 @@ gulp.task('webpack:dev', () => {
   return gulp.src('./app/js/entry.js')
     .pipe(webpack({
       devtool: 'source-map',
-      module: {
-        loaders: [{
-          test: /\.css$/,
-          loader: 'style!css'
-        }]
-      },
       output: {
         filename: 'bundle.js'
       }
