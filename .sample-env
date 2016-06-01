@@ -1,0 +1,4 @@
+export TWITTER_CONSUMER_KEY=replace
+export TWITTER_CONSUMER_SECRET=replace
+export TWITTER_ACCESS_TOKEN_KEY=replace
+export TWITTER_ACCESS_TOKEN_SECRET=replace
