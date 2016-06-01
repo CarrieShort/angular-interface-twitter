@@ -25,7 +25,7 @@ twitterRouter.post('/new_tweet', bodyParser, (req, res) => {
   client.post('statuses/update', { status: req.body.status }, (error, data) => {
     if (error) return console.log(error);
     res.status(200).json({
-      data: data
+      tweet: data
     });
   });
 });
@@ -34,7 +34,7 @@ twitterRouter.delete('/remove_tweet/:id', (req, res) => {
   client.post('statuses/destroy/:id', { id: req.params.id }, (error, data) => {
     if (error) return console.log(error);
     res.status(200).json({
-      data: data.text + ' has been deleted'
+      removed: data.text + ' has been deleted'
     });
   });
 });

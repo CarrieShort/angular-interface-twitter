@@ -9,10 +9,16 @@ module.exports = function(app) {
     }.bind(this);
     this.deleteTweet = function(tweet) {
       $http.delete('/api/remove_tweet/' + tweet.id_str)
-      .then((res) => {
-        console.log(res.data);
+      .then(() => {
         this.tweets.splice(this.tweets.indexOf(tweet), 1);
       });
-    };
+    }.bind(this);
+    this.addTweet = function() {
+      $http.post('/api/new_tweet', this.newTweet)
+      .then((res) => {
+        this.tweets.unshift(res.data.tweet);
+        this.newTweet = null;
+      });
+    }.bind(this);
   }]);
 };

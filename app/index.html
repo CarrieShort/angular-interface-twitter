@@ -8,6 +8,10 @@
   <body data-ng-app="twitterApp">
     <h1>Twitter App</h1>
     <section data-ng-controller="TwitterController as twitterCtrl" data-ng-init="twitterCtrl.getAll()">
+      <form data-ng-submit="twitterCtrl.addTweet()">
+        <input type="text" name="name" data-ng-model="twitterCtrl.newTweet.status">
+        <button type="submit">tweet</button>
+      </form>
       <ul>
         <li data-ng-repeat="tweet in twitterCtrl.tweets">
           {{tweet.text}}
