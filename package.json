@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/CarrieShort/angular-interface-twitter#readme",
   "devDependencies": {
-    "dotenv": "^2.0.0"
+    "dotenv": "^2.0.0",
+    "gulp": "^3.9.1",
+    "webpack": "^1.13.1",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "twit": "^2.2.4"
   }
 }
