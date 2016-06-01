@@ -11,6 +11,7 @@
       <ul>
         <li data-ng-repeat="tweet in twitterCtrl.tweets">
           {{tweet.text}}
+          <button data-ng-click="twitterCtrl.deleteTweet(tweet)">x</button>
         </li>
       </ul>
     </section>

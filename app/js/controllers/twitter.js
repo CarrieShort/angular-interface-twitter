@@ -7,5 +7,12 @@ module.exports = function(app) {
         this.tweets = res.data.tweets;
       });
     }.bind(this);
+    this.deleteTweet = function(tweet) {
+      $http.delete('/api/remove_tweet/' + tweet.id_str)
+      .then((res) => {
+        console.log(res.data);
+        this.tweets.splice(this.tweets.indexOf(tweet), 1);
+      });
+    };
   }]);
 };
