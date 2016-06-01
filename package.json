@@ -1,0 +1,29 @@
+{
+  "name": "angular-interface-twitter",
+  "version": "1.0.0",
+  "description": "An angular interface using the twitter API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarrieShort/angular-interface-twitter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CarrieShort/angular-interface-twitter/issues"
+  },
+  "homepage": "https://github.com/CarrieShort/angular-interface-twitter#readme",
+  "devDependencies": {
+    "dotenv": "^2.0.0",
+    "gulp": "^3.9.1",
+    "webpack": "^1.13.1",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "twit": "^2.2.4"
+  }
+}
